@@ -56,14 +56,25 @@ document.querySelectorAll('.blog-card').forEach(card => {
 });
 
 // Burger Menu Toggle for Mobile Devices
+// Burger Menu Toggle for Mobile Devices
 const burgerMenu = document.querySelector('.burger-menu');
 const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links li a');
 
 if (burgerMenu && navLinks) {
     burgerMenu.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
+    // Close menu when a link is clicked
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active'); // Hide the menu
+        });
+    });
 }
+
+
 
 // Image Slider for Home Page (for multiple images)
 let slideIndex = 0;
