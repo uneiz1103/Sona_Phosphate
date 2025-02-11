@@ -75,7 +75,6 @@ if (burgerMenu && navLinks) {
 }
 
 
-
 // Image Slider for Home Page (for multiple images)
 let slideIndex = 0;
 const slides = document.getElementsByClassName("slide");
