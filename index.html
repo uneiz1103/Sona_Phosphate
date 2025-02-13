@@ -42,14 +42,22 @@
     
 
     <!-- Home Page Slider -->
-    <section id="home" class="slider-section">
-        <div class="slider">
-            <div class="slide">
-                <video class="slide-video" autoplay muted loop playsinline preload="auto" poster="images/video-poster.jpg">
-                    <source src="images/Factory_video2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+     <section id="home" class="slider-section">
+        <div class="video-wrapper">
+            <!-- Background Blur Video -->
+            <video class="background-video" autoplay muted loop playsinline preload="auto">
+                <source src="images/Factory_video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+    
+            <!-- Blur Overlay (Side Areas) -->
+            <div class="blur-overlay"></div>
+    
+            <!-- Main Center Video (Clear) -->
+            <video class="main-video" autoplay muted loop playsinline preload="auto">
+                <source src="images/Factory_video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
     
