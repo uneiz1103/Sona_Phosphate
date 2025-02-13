@@ -59,10 +59,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Image Slider Functionality for Home Page (with Video)
-    const video = document.querySelector(".slide-video");
+    // Video Transparency & Blur Effect
+    const video = document.querySelector(".background-video");
+    const videoOverlay = document.querySelector(".video-overlay");
+
     if (video) {
-        video.play(); // Auto-play the video when the page loads
+        video.play(); // Auto-play video
+        video.style.filter = "opacity(80%)"; // Apply transparency effect
+
+        // Smooth fade-in effect on load
+        video.style.transition = "opacity 1s ease-in-out";
+        video.style.opacity = "1";
+    }
+
+    if (videoOverlay) {
+        videoOverlay.style.backdropFilter = "blur(10px)"; // Apply background blur
+        videoOverlay.style.transition = "backdrop-filter 1s ease-in-out"; // Smooth transition
     }
 
     // Contact Form Submission Animation and Handling
